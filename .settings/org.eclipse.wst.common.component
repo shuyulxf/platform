@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="platform">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/views" source-path="/src/main/webapp/views"/>
+        <wb-resource deploy-path="/WEB-INF/conf" source-path="/src/main/resources/conf"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources/static"/>
+        <wb-resource deploy-path="/WEB-INF/errorPages" source-path="/src/main/webapp/errorPages"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/target/platform/WEB-INF/lib"/>
+        <wb-resource deploy-path="/WEB-INF" source-path="/src/main/webapp/WEB-INF"/>
+        <property name="java-output-path" value="/platform/target/classes"/>
+        <property name="context-root" value="platform"/>
+    </wb-module>
+</project-modules>

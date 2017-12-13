@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">	<!-- <appender>是<configuration>的子节点，是负责写日志的组件。此处是写入控制台 -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{80} -
+			%msg%n</pattern>
+		</layout>
+	</appender>
+
+	<!-- filter third dependency log info by lift the log level, can be WARN or OFF -->
+	<logger name="org.springframework" level="WARN"/>
+	<logger name="o.s" level="WARN"/>
+	
+	<!--  -->
+	<logger name="indi.shuyu" level="INFO" />
+	    <!-- 规定把信息同时输入到控制台和文件里面 -->
+	<root level="DEBUG">
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>

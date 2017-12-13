@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import indi.shuyu.base.encrypt.DESEncryptAlgorithm;
+import indi.shuyu.common.encrypt.DESEncryptAlgorithm;
+
 
 public class DESEncryptAlgorithmTest {
 	
@@ -12,7 +13,6 @@ public class DESEncryptAlgorithmTest {
 	public void evaluatesExpression() {
 		
 		DESEncryptAlgorithm obj = new DESEncryptAlgorithm();
-		String value = obj.getResult();
 		assertEquals(obj.getResult(), "1");
 	}
 }

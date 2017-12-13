@@ -1,4 +1,4 @@
-package indi.shuyu.base.encrypt;
+package indi.shuyu.common.encrypt;
 
 import java.util.HashMap;
 

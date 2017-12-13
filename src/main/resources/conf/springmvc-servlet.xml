@@ -15,14 +15,10 @@
     <mvc:resources mapping="/img/**" location="/images/" />
     <mvc:resources mapping="/css/**" location="/css/" />
     <mvc:resources mapping="/js/**" location="/js/" />
-    
-    
-	<!-- scan the package and the sub package -->
-	<context:component-scan base-package="indi.shuyu.controllers"/>		
-
-    <!-- if you use annotation you must configure following setting -->
-    <mvc:annotation-driven />
-    		    
+       
+	
+	<!-- 注意：FreeMarker与SpringMVC集成时，其配置一定要放在SpringMVC的配置之前 -->  
+    <!-- 否则：在访问"/getUser"时服务器就会报告[HTTP Status 404 - /WEB-INF/jsp/myfree.jsp] -->  
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
         <!-- 指定FreeMarker模板文件目录 -->  
         <property name="templateLoaderPath" value="/WEB-INF/views/"/>  
@@ -32,5 +28,14 @@
         <property name="suffix" value=".ftl"/>  
         <property name="contentType" value="text/html; charset=UTF-8"/>  
     </bean>  
+    
+    <!-- jsp -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
+            id="internalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/" />
+        <property name="suffix" value=".jsp" />
+        <property name="contentType" value="text/html; charset=UTF-8"/>  
+    </bean>
+     
     
 </beans>

@@ -1,4 +1,4 @@
-package indi.shuyu.handle.exception;
+package indi.shuyu.system.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -20,11 +20,16 @@ public class ErrorController {
 		int httpErrorCode = getErrorCode(httpRequest);
 	    String errorPagePath =  GSVS.getResponseStatusAndErrorResource(httpErrorCode + "");
 	    
-        ModelAndView mv = new ModelAndView(errorPagePath);
-       
+	    ModelAndView mv = null;
+	    
+	    if (errorPagePath == null) {
+	    	mv = new ModelAndView();
+	    } else {
+	    	mv = new ModelAndView(errorPagePath);
+	    }
+        
         return mv;
     }
-	
 	
 	private int getErrorCode(HttpServletRequest httpRequest) {
 	    return (Integer) httpRequest

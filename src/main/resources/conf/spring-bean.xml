@@ -20,6 +20,6 @@
 	<bean id="httpHelper" class="indi.shuyu.common.http.SpringHttpHelper" scope="singleton"></bean>  
 	
 	<!-- exception handlers -->
-	<bean id="exceptionResolver" class="indi.shuyu.handle.exception.MappingExceptionResolver"></bean>  
+	<bean id="exceptionResolver" class="indi.shuyu.system.exception.MappingExceptionResolver"></bean>  
 	
 </beans>

@@ -17,4 +17,6 @@
     <mvc:annotation-driven />
     
 	<import resource="spring-bean.xml"/>
+	<import resource="spring-dao.xml"/>
+	<import resource="spring-service.xml"/>
 </beans>
